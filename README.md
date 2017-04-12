@@ -1,7 +1,8 @@
 # seeddms-mbk-softlinks
 SeedDMS Softlinks Extension
+===========================
 
-Extension for SeddDMS >5.0 that enables links from a Folder View to folders or documents located on other folders.
+Extension for SeddDMS 5.0+ that enables links from a Folder View to folders or documents located on other folders.
 
 It looks for an attribute named "isLink". If isLink is TRUE, then looks for another attribute called "linkedId". If linkedId is >0, then the default link on the view is replaced by a link to the file or folder with ID equal to the value of the attribute linkedId. A folder links to another folder, and a document links to another document.
 
