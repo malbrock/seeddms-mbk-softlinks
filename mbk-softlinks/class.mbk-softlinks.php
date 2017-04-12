@@ -177,7 +177,7 @@ class SeedDMS_ExtExample_ViewFolder {
 				$links = $document->getDocumentLinks();
 				$links = SeedDMS_Core_DMS::filterDocumentLinks($user, $links);
 
-				$content .= "<td>";
+				$content .= "<tr><td>";
 				$content .= "<img draggable=\"false\" class=\"mimeicon\" src=\"".$imgpath."document_link.png\" title=\"Carpeta Enlazada\">";
 				$content .= "</td>";
 
@@ -215,7 +215,7 @@ class SeedDMS_ExtExample_ViewFolder {
 					$content .= '<span style="padding: 2px; color: #CCC;"><i class="icon-edit"></i></span>';
 				}
 				$content .= "</div>";
-				$content .= "</td>";
+				$content .= "</td></tr>";
 			}
 			return $content;
 		}
