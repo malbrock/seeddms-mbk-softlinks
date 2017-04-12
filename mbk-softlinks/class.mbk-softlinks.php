@@ -28,7 +28,7 @@
  *
  * @author  Sergio Maldonado <smaldona@malbrock.com>
  * @package SeedDMS
- * @subpackage  mbk-linked-items
+ * @subpackage  mbk-softlinks
  */
 class SeedDMS_ExtMbkSoftlinks extends SeedDMS_ExtBase {
 
@@ -62,7 +62,7 @@ class SeedDMS_ExtMbkSoftlinks extends SeedDMS_ExtBase {
  *
  * @author  Sergio Maldonado <smaldona@malbrock.com>
  * @package SeedDMS
- * @subpackage  mbk-linked-items
+ * @subpackage  mbk-softlinks
  */
 class SeedDMS_ExtExample_ViewFolder {
 
@@ -75,7 +75,7 @@ class SeedDMS_ExtExample_ViewFolder {
 		$dms = $GLOBALS['dms'];
 		$user = $GLOBALS['user'];
 		$showtree = 1;
-		$imgpath = "../ext/mbk-linked-items/images/";
+		$imgpath = "../ext/mbk-softlinks/images/";
 		$attributes = $subfolder->getAttributes();
 		
 		$isLink = false;
@@ -110,7 +110,7 @@ class SeedDMS_ExtExample_ViewFolder {
 			$content .= "</td>\n";
 			$content .= "<td colspan=\"1\" nowrap><small>";
 	
-			$content .= getMLText("linked_folder");//"Carpeta Enlazada"; 
+			$content .= $GLOBALS['LANG'][$user->getLanguage()]['linked_folder'];
 
 			$content .= "</small></td>";
 			$content .= "<td>";
@@ -138,7 +138,7 @@ class SeedDMS_ExtExample_ViewFolder {
 		$dms = $GLOBALS['dms'];
 		$user = $GLOBALS['user'];
 		$showtree = 1;
-		$imgpath = "../ext/mbk-linked-items/images/";
+		$imgpath = "../ext/mbk-softlinks/images/";
 		$attributes = $document->getAttributes();
 
 		$isLink = false;
@@ -178,7 +178,7 @@ class SeedDMS_ExtExample_ViewFolder {
 				$links = SeedDMS_Core_DMS::filterDocumentLinks($user, $links);
 
 				$content .= "<td>";
-				$content .= "<img draggable=\"false\" class=\"mimeicon\" src=\"".$imgpath."link.png\" title=\"Carpeta Enlazada\">";
+				$content .= "<img draggable=\"false\" class=\"mimeicon\" src=\"".$imgpath."document_link.png\" title=\"Carpeta Enlazada\">";
 				$content .= "</td>";
 
 				$content .= "<td>";	
@@ -225,3 +225,4 @@ class SeedDMS_ExtExample_ViewFolder {
 }
 
 ?>
+
